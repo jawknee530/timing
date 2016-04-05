@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo \*
+top -bn1 | grep load
+top -bn1 | grep matrixmult
+echo \*
