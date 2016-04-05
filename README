@@ -1,0 +1,55 @@
+SETUP:
+
+  Save the directory timing in the same folder as your executable.
+
+  I believe that you need to have . added to your PATH.
+
+  In order for the script to work you must create several files.
+  These files need to follow the naming scheme Npcs where N is a
+  number of hosts listed. 
+  the file 3pcs would contain the following:
+  o251-02
+  o251-03
+  o251-04
+
+  You need 4pcs, 8pcs, 12pcs, 16pcs, and 20pcs. Save these files
+  in the hostfiles directory.
+
+RUNNING:
+
+  The script timing can take one of the following flags:
+  -ijk -ikj -kij -all
+
+  All will run all 90 timing runs.
+  5 runs/comm_sz * 6 comm_sz * 3 forms
+
+  The other three flags will run the 30 timing runs corresponding
+  to the flag used.
+
+  You do not need to interact with the script. The hostfiles 
+  directory contains several input files and it should direct them
+  into your program based on the form used.
+
+RESULTS:
+
+  All results are saved in the Results directory and each
+  permutaion of form and comm_sz will have its own file containing
+  the output of all five of its timing runs.
+
+OTHER:
+
+  The cpu script will show you the current cpu load as well as how
+  many other instances of matrixmult are being run on your current
+  machine.
+
+  If you use this I recommeond not using the -all flag as it will
+  take a long time and provide more room for something crazy to 
+  happen. You can also go into the script and comment out for 
+  loops if you only want to run certain tests.
+
+  It'll throw an error about not being able to remove files the
+  first time you run it but don't worry. You can also check on its
+  progress by looking at what files it's created in the results
+  folder while it's running and using cat to display how many 
+  of its five runs it's completed for any givein form-comm_sz
+  permutation.
