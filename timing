@@ -145,7 +145,7 @@ else
       rm results/ijk1.out
     for i in `seq 1 5`;
     do
-      #touch ./results/ijk1.out
+      touch ./results/ijk1.out
       cat hostfiles/inputijk | mpirun -n 1 ../matrixmult >> ./results/ijk1.out
     done
   fi
