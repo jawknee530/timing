@@ -20,8 +20,8 @@ RUNNING:
   The script timing can take one of the following flags:
   -ijk -ikj -kij -all
 
-  All will run all 90 timing runs.
-  5 runs/comm_sz * 6 comm_sz * 3 forms
+  -all will run all 90 timing runs.
+  5 runs per comm_sz * 6 comm_sz * 3 forms
 
   The other three flags will run the 30 timing runs corresponding
   to the flag used.
