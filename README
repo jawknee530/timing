@@ -2,6 +2,8 @@ SETUP:
 
   Save the directory timing in the same folder as your executable.
 
+  Create a directory named results inside of the timing directory
+
   I believe that you need to have . added to your PATH.
 
   In order for the script to work you must create several files.
@@ -18,7 +20,7 @@ SETUP:
 
   etc
 
-  You need 4pcs, 8pcs, 12pcs, 16pcs, and 20pcs. Save these files
+  You need 2pcs, 4pcs, 6pcs, 8pcs, and 10pcs. Save these files
   in the hostfiles directory, you do not need to make a hostfile
   for 1pc the script doesn't require it.
 
