@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ $1 == "-ijk" ] || [ $1 == "-all" ]; then
+  echo "-ijk"
+fi
