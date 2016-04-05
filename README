@@ -7,10 +7,16 @@ SETUP:
   In order for the script to work you must create several files.
   These files need to follow the naming scheme Npcs where N is a
   number of hosts listed. 
-  the file 3pcs would contain the following:
+  For example the file 3pcs would contain the following:
   o251-02
   o251-03
   o251-04
+
+  Or the file 2pcs would contain:
+  o251-12
+  o251-13
+
+  etc
 
   You need 4pcs, 8pcs, 12pcs, 16pcs, and 20pcs. Save these files
   in the hostfiles directory.
