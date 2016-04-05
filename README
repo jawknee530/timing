@@ -1,8 +1,7 @@
 SETUP:
 
-  Save the directory timing in the same folder as your executable.
-
-  Create a directory named results inside of the timing directory
+  Save the directory containg timing and all of the included
+  filed in the same directory as your executable.
 
   I believe that you need to have . added to your PATH.
 
@@ -44,6 +43,8 @@ RESULTS:
   All results are saved in the Results directory and each
   permutaion of form and comm_sz will have its own file containing
   the output of all five of its timing runs.
+
+  There is a sample result file included in the results directory.
 
 OTHER:
 
