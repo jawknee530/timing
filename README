@@ -19,7 +19,8 @@ SETUP:
   etc
 
   You need 4pcs, 8pcs, 12pcs, 16pcs, and 20pcs. Save these files
-  in the hostfiles directory.
+  in the hostfiles directory, you do not need to make a hostfile
+  for 1pc the script doesn't require it.
 
 RUNNING:
 

@@ -26,26 +26,26 @@ else
       cat hostfiles/inputikj | mpirun -hostfile hostfiles/6pcs ../matrixmult >> ./results/ikj12.out
     done
 
-    rm results/ikj8.out
-    for i in `seq 1 5`;
-    do
-      touch ./results/ikj8.out
-      cat hostfiles/inputikj | mpirun -hostfile hostfiles/8pcs -ppn 1 ../matrixmult >> ./results/ikj8.out
-    done
+    #rm results/ikj8.out
+    #for i in `seq 1 5`;
+    #do
+    #  touch ./results/ikj8.out
+    #  cat hostfiles/inputikj | mpirun -hostfile hostfiles/8pcs -ppn 1 ../matrixmult >> ./results/ikj8.out
+    #done
 
-    rm results/ikj4.out
-    for i in `seq 1 5`;
-    do
-      touch ./results/ikj4.out
-      cat hostfiles/inputikj | mpirun -hostfile hostfiles/4pcs -ppn 1 ../matrixmult >> ./results/ikj4.out
-    done
+    #rm results/ikj4.out
+    #for i in `seq 1 5`;
+    #do
+    #  touch ./results/ikj4.out
+    #  cat hostfiles/inputikj | mpirun -hostfile hostfiles/4pcs -ppn 1 ../matrixmult >> ./results/ikj4.out
+    #done
 
-    rm results/ikj1.out
-    for i in `seq 1 5`;
-    do
-      touch ./results/ikj1.out
-      cat hostfiles/inputikj | mpirun -n 1 ../matrixmult >> ./results/ikj1.out
-    done
+    #rm results/ikj1.out
+    #for i in `seq 1 5`;
+    #do
+    #  touch ./results/ikj1.out
+    #  cat hostfiles/inputikj | mpirun -n 1 ../matrixmult >> ./results/ikj1.out
+    #done
   fi
 
 
