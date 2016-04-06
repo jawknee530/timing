@@ -9,8 +9,15 @@
 #  echo '*'
 #done
 
-  ssh o251-23 "
-  cd 551/p2/testing
-  cat hostfiles/inputijk | mpirun -n 1 ../matrixmult >> ./results/ijk1.out
-  "
+    echo "Starting ijk 8"
+    for i in `seq 1 5`;
+    do
+      echo -ne "On run " $i " of 5.\r"
+      touch ./results/ijk8.out
+      cat hostfiles/inputijk | mpirun -hostfile hostfiles/4pcs ../matrixmult >> ./results/ijk8.out
+    done
+  #ssh o251-23 "
+  #cd 551/p2/testing
+  #cat hostfiles/inputijk | mpirun -n 1 ../matrixmult >> ./results/ijk1.out
+  #"
 
