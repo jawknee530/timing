@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+for i in `seq 1 9`;
+do
+  echo "Load of PC " $i
+  ssh o251-0$i "
+  top -bn1 | grep 'PID\|matrix\|mult\|load\|p2'
+  "
+  echo '*'
+done
+
+for i in `seq 10 30`;
+do
+  echo "Load of PC " $i
+  ssh o251-$i "
+  top -bn1 | grep 'PID\|matrix\|mult\|load\|p2'
+  "
+  echo '*'
+done
+
