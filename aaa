@@ -1,0 +1,10 @@
+#!/bin/bash
+for i in `seq 22 26`;
+do
+  echo "Load of PC " $i
+  ssh o251-$i "
+  cd Parallel/Parallel/Prog2/timing
+  cat hostfiles/inputijk | mpirun -n 1 ../matrixmult >> ./results/ijk1.out
+  "
+  echo '*'
+done
