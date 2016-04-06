@@ -1,6 +1,5 @@
 #!/bin/bash
 
 echo \*
-top -bn1 | grep load
-top -bn1 | grep matrixmult
+  top -bn1 | grep 'PID\|matrix\|mult\|load\|p2'
 echo \*
