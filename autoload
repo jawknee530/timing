@@ -1,0 +1,22 @@
+#!/bin/bash
+
+while true; do
+  for i in `seq 1 9`;
+  do
+    echo -ne "Load of PC 0"$i
+    ssh o251-0$i "
+    top -bn1 | grep 'load average'
+    " | awk '{printf " %.2f, %.2f, %.2f\n", $10, $11, $12}'
+  done
+
+  for i in `seq 10 30`;
+  do
+    echo -ne "Load of PC "$i
+    ssh o251-$i "
+    top -bn1 | grep 'load average'
+    " | awk '{printf " %.2f, %.2f, %.2f\n", $10, $11, $12}'
+  done
+  echo -ne "\033[30A"
+  sleep 10
+done
+
