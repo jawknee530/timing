@@ -1,9 +1,12 @@
+YOUR EXECUTABLE --MUST-- BE NAMED "matrixmult"
+
 SETUP:
 
   Save the directory containg timing and all of the included
   filed in the same directory as your executable.
 
-  I believe that you need to have . added to your PATH.
+  I believe that you need to have . added to your PATH but am
+  not certain.
 
   In order for the script to work you must create several files.
   These files need to follow the naming scheme Npcs where N is a
@@ -13,19 +16,23 @@ SETUP:
   o251-03
   o251-04
 
+
   Or the file 2pcs would contain:
   o251-12
   o251-13
 
   etc
 
-  You need 2pcs, 4pcs, 6pcs, 8pcs, and 10pcs. Save these files
-  in the hostfiles directory, you do not need to make a hostfile
-  for 1pc the script doesn't require it.
+  2pcs is used for 4 core timing runs and 4pcs is used for 8
+  core timing runs and so on.
+
+  You need to create 2pcs, 4pcs, 6pcs, 8pcs, and 10pcs. Save 
+  these files in the hostfiles directory, you do not need to make
+  a hostfile for 1pc the script doesn't require it.
 
 RUNNING:
 
-  The script timing can take one of the following flags:
+  The script "timing" can take one of the following flags:
   -ijk -ikj -kij -all
 
   -all will run all 90 timing runs.
@@ -46,20 +53,28 @@ RESULTS:
 
   There is a sample result file included in the results directory.
 
+                  --------IMPORTANT----------
+
+  THE SCRIPT JUST REDIRECTS THE OUTPUT OF YOUR PROGRAM TO THE 
+  OUTPUT FILES. MAKE SURE YOUR PROGRAM IS NOT PRINTING THE 
+  MATRICES AND IS ONLY OUTPUTING THE COMM_SZ AND THE RUN TIME.
+
+                  --------IMPORTANT----------
+
 OTHER:
 
-  The cpu script will show you the current cpu load as well as how
-  many other instances of matrixmult are being run on your current
-  machine.
+  The "load" script will ssh into each lab machine and give you
+  its current load and list how many users are currently doing
+  timing runs so you can avoid conflicts.
+
+  The "cpu" script will do the same as load but for just the 
+  current machine.
 
   If you use this I recommeond not using the -all flag as it will
   take a long time and provide more room for something crazy to 
   happen. You can also go into the script and comment out for 
   loops if you only want to run certain tests.
 
-  It'll throw an error about not being able to remove files the
-  first time you run it but don't worry. You can also check on its
-  progress by looking at what files it's created in the results
-  folder while it's running and using cat to display how many 
-  of its five runs it's completed for any givein form-comm_sz
-  permutation.
+  The script will tell you when it starts a new batch of five 
+  runs for each permutation of form and P so you get an idea of
+  its progress.
