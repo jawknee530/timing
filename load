@@ -1,9 +1,8 @@
 #!/bin/bash
 
-while true; do
   for i in `seq 1 9`;
   do
-    echo -n "PC " $i
+    echo -ne "PC " $i" "
     ssh o251-0$i "
     top -bn1 | grep 'a\.out\|PID\|matrix\|mult\|load\|p2'
     "
@@ -12,10 +11,9 @@ while true; do
 
   for i in `seq 10 30`;
   do
-    echo -n"PC " $i
+    echo -ne "PC " $i" "
     ssh o251-$i "
     top -bn1 | grep 'a\.out\|PID\|matrix\|mult\|load\|p2'
     "
     echo '*'
   done
-done
